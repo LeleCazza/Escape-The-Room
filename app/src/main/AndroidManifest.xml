@@ -22,6 +22,7 @@
         <activity android:name=".ComputerLoginActivity"/>
         <activity android:name=".ComputerDesktopActivity"/>
         <activity android:name=".ComputerMailActivity"/>
+        <activity android:name=".ComputerRegistroActivity"/>
         <activity android:name=".CestinoActivity"/>
         <activity android:name=".CassettoActivity"/>
         <activity android:name=".BancoActivity"/>

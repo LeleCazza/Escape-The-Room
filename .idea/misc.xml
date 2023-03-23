@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_banco.xml" value="0.33" />
         <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_cassetto.xml" value="0.25" />
         <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_cestino.xml" value="0.14427083333333332" />
-        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_computer_mail.xml" value="0.33" />
-        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_lavagna.xml" value="0.5" />
+        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_computer_mail.xml" value="0.25" />
+        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_computer_registro.xml" value="0.17" />
+        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_lavagna.xml" value="0.25" />
+        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_main.xml" value="0.17" />
+        <entry key="..\:/Users/leyel/Documents/Universita/TESI/Escape-The-Room/app/src/main/res/layout/activity_test.xml" value="0.11822916666666666" />
         <entry key="..\:/Users/leyel/Documents/Universita/TESI/escape_room/app/src/main/res/layout/activity_banco.xml" value="0.15443840579710144" />
         <entry key="..\:/Users/leyel/Documents/Universita/TESI/escape_room/app/src/main/res/layout/activity_camera.xml" value="0.12916666666666668" />
         <entry key="..\:/Users/leyel/Documents/Universita/TESI/escape_room/app/src/main/res/layout/activity_cassetto.xml" value="0.15443840579710144" />
