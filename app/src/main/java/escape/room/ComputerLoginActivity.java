@@ -11,11 +11,11 @@ public class ComputerLoginActivity extends AppCompatActivity {
 
     private String icona = "login";
     private static final String username  = "superprof";
-    private static final String usernameAutoritario  = "terrore77";
-    private static final String password  = "vialavello90mila";
-    private static final String passwordAutoritario  = "trezza";
-    private static final String usernameDirigente  = "dirigentemega";
-    private static final String passwordDirigente  = "amicicucciolotti";
+    private static final String password  = "zuzzurellone";
+    private static final String usernameAutoritario  = "90lapaura";
+    private static final String passwordAutoritario  = "ringhio";
+    private static final String usernameDirigente  = "megadirettore";
+    private static final String passwordDirigente  = "megaditta";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

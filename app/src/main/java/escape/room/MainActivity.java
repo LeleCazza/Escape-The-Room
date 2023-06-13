@@ -6,11 +6,12 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.VideoView;
+
+import escape.room.util.Typewriter;
 
 public class MainActivity extends AppCompatActivity {
     private static final String[] CAMERA_PERMISSION = new String[]{Manifest.permission.CAMERA};
@@ -21,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_test);
         set_pusanti(View.INVISIBLE);
+
         /*
         setContentView(R.layout.activity_main);
         Button enableCamera = findViewById(R.id.enableCamera);
@@ -39,20 +42,34 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        VideoView videoView = findViewById(R.id.videoView);
+
+        set_pusanti(View.INVISIBLE);
         if(videoIntro){
-            videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.intro);
+            VideoView videoView = findViewById(R.id.videoView_intro);
+            videoView.setVideoPath("android.resource://" + getPackageName()+ "/" + R.raw.prof_entra);
             videoView.start();
             videoView.setOnCompletionListener(mp -> {
-                videoView.setVisibility(View.INVISIBLE);
-                set_pusanti(View.VISIBLE);
+                TextView textView = findViewById(R.id.testo);
+                if(videoIntro){
+                    textView.setBackgroundResource(R.drawable.back_text);
+                    textView.setVisibility(View.VISIBLE);
+                    Typewriter writer = new Typewriter(textView);
+                    writer.setCharacterDelay(50);
+                    writer.animateText(getDialogo());
+                    videoView.setVideoPath("android.resource://" + getPackageName()+ "/" + R.raw.prof_esce);
+                    videoView.start();
+                    videoView.pause();
+                    videoView.postDelayed((Runnable) videoView::start,8000);
+                    videoIntro = false;
+                }else{
+                    textView.setVisibility(View.INVISIBLE);
+                    videoView.setVisibility(View.INVISIBLE);
+                    set_pusanti(View.VISIBLE);
+                }
             });
         }
-        else{
-            videoView.setVisibility(View.INVISIBLE);
+        else
             set_pusanti(View.VISIBLE);
-        }
-        videoIntro = false;
         findViewById(R.id.cestino).setOnClickListener(v -> {
             startActivity(new Intent(this,CestinoActivity.class));
         });
@@ -68,6 +85,19 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.banco).setOnClickListener(v -> {
             startActivity(new Intent(this,BancoActivity.class));
         });
+    }
+
+    private CharSequence getDialogo(){
+        //inserire il carattere " %" per aggiornare la textview
+        CharSequence dialogo = "";
+        dialogo = "Ci vediamo domani bello di Mamma!";
+        dialogo += " %";
+        dialogo += "MI RACCOMANDO!";
+        dialogo += " %";
+        dialogo += "Unico risultato possibile: VITTORIA.";
+        dialogo += " %";
+        dialogo += "Mo vado.";
+        return dialogo;
     }
 
     public static boolean getLockLavagna() {

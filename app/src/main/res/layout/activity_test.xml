@@ -6,13 +6,9 @@
     android:layout_height="match_parent">
 
     <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/videoView_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/cestino"
@@ -60,4 +56,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lavagna" />
+
+    <TextView
+        android:id="@+id/testo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#4BFFFFFF"
+        android:paddingStart="15px"
+        android:paddingEnd="15px"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

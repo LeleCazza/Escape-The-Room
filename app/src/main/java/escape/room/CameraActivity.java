@@ -29,6 +29,7 @@ import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import escape.room.databinding.ActivityCameraBinding;
+import escape.room.util.Draw;
 
 public class CameraActivity extends AppCompatActivity {
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
@@ -52,7 +53,7 @@ public class CameraActivity extends AppCompatActivity {
                 new CustomObjectDetectorOptions.Builder(localModel)
                         .setDetectorMode(ObjectDetectorOptions.STREAM_MODE)
                         .enableClassification()
-                        .setClassificationConfidenceThreshold(0.95f)
+                        .setClassificationConfidenceThreshold(0.7f)
                         .setMaxPerObjectLabelCount(3)
                         .build();
         objectDetector = ObjectDetection.getClient(options);
@@ -134,7 +135,7 @@ public class CameraActivity extends AppCompatActivity {
             float y = event.getY();
             if(element.getRect().contains((int)x,(int)y)){
                 switch (etichetta){
-                    case "sapone":
+                    case "computer":
                         startActivity(new Intent(this, ComputerLoginActivity.class));
                         break;
                     case "cestino":
