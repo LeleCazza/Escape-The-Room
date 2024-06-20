@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="escape.room">
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="EroomS"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EscapeRoom">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BancoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CameraActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComputerLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComputerDesktopActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComputerMailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ComputerRegistroActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CestinoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CassettoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ImpostazioniActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LavagnaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".PausaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RansomwareActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".StoriaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".TestActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

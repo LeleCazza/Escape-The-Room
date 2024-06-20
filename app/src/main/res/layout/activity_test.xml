@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/countdown_textview_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20:00"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CESTINO"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.349" />
+
+    <Button
+        android:id="@+id/cassetto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CASSETTO"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cestino" />
+
+    <Button
+        android:id="@+id/computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPUTER"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cassetto" />
+
+    <Button
+        android:id="@+id/lavagna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAVAGNA"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/computer" />
+
+    <Button
+        android:id="@+id/banco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BANCO"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lavagna" />
+</androidx.constraintlayout.widget.ConstraintLayout>
